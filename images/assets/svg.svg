@@ -1,0 +1,16 @@
+<svg width="140" height="120" viewBox="0 0 140 120" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .a { fill: #000000; }
+    .i { fill: #FFD700; }
+  </style>
+
+  <!-- Letter A -->
+  <text x="10" y="95" font-family="Poppins, Montserrat, Arial, sans-serif" font-size="96" font-weight="700" class="a">
+    A
+  </text>
+
+  <!-- Letter I -->
+  <text x="80" y="95" font-family="Poppins, Montserrat, Arial, sans-serif" font-size="96" font-weight="700" class="i">
+    I
+  </text>
+</svg>
