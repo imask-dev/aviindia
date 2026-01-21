@@ -7,13 +7,77 @@
     <title>AviIndia | Institute Of Aviation And Hospitality Management (AIAHM)</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image" href="/images/assets/ai.png">
+    <link rel="icon" href="/images/assets/ai.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
 
 </head>
-<body>
 
+<!-- Sticky Enquiry Button -->
+<div id="sticky-enquiry-btn">Enquire Now</div>
+
+<!-- Enquiry Popup -->
+<div id="enquiry-popup">
+  <div class="popup-box">
+    <span id="close-popup">&times;</span>
+    <h2>Enquiry Form</h2>
+
+    <form id="enquiryForm">
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your name" required>
+
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter your email" required>
+
+      <label>Phone Number</label>
+      <input type="tel" placeholder="Enter your number" required>
+
+      <label>Interested Course</label>
+      <select>
+        <option>Cabin Crew Program</option>
+        <option>Ground Staff</option>
+        <option>Airport Management</option>
+        <option>Hospitality</option>
+      </select>
+
+      <label>Message</label>
+      <textarea placeholder="How can we help you?"></textarea>
+
+      <button type="submit">SEND MESSAGE</button>
+
+          <!-- <div id="successBox">
+  <h3>Thank You!</h3>
+  <p>Your enquiry has been submitted successfully.</p>
+</div> -->
+<div id="successOverlay">
+  <div class="success-card">
+    <div class="checkmark">✓</div>
+    <h2>Enquiry Sent!</h2>
+    <p>Thank you for contacting AIAHM.<br>Our team will reach you shortly.</p>
+    <p class="redirect">Redirecting to Home...</p>
+    <button id="closeSuccess">Close Now</button>
+  </div>
+</div>
+
+</form>
+
+  </div>
+</div>
+
+<script>
+  const btn = document.getElementById("sticky-enquiry-btn");
+  const popup = document.getElementById("enquiry-popup");
+  const close = document.getElementById("close-popup");
+
+  btn.onclick = () => popup.style.display = "flex";
+  close.onclick = () => popup.style.display = "none";
+
+  window.onclick = (e) => {
+    if (e.target === popup) popup.style.display = "none";
+  };
+</script>
+
+<body>
     <header>
         <div class="container navbar">
             <a href="/index.html" class="logo">
@@ -23,7 +87,7 @@
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links" id="nav-links">
-                <li><a href="https://www.aiahm.in/">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="/pages/courses.html">Courses</a></li>
                 <li><a href="#admission">Admission</a></li>
@@ -146,7 +210,6 @@
                 <a href="https://www.facebook.com/aiahmofficial"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/aiahm_official/"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/company/aiahm"><i class="fab fa-linkedin-in"></i></a>
-                <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
                 <a href="https://www.youtube.com/channel/UCNrl94636uCwdz6MFzzR1aQ"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
@@ -155,7 +218,7 @@
         <div class="container ">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <img src="/images/assets/footer.png" alt="AVIINDIA">
+                    <img src="/images/assets/Logo.jpg" alt="AVIINDIA">
                     <p>The Premier Institute For Aviation & Hospitality Management Training.</p>
                 </div>
 
@@ -187,11 +250,10 @@
             <div class="copyright">
             <p>&copy; 2026 AviIndia Institute Of Aviation and Hospitality Management. All Rights Reserved.</p>
             </div>
-        </div>
-    </footer>
+               </div>
+             </footer>
 
     <script src="/js/script.js"></script>
     
 </body>
-
 </html>
