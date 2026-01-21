@@ -27,9 +27,3 @@ export default async function handler(req, res) {
 
   return res.json({ success: true });
 }
-
-
-await fetch(process.env.MAILCHIMP_WEBHOOK, {
-  method: "POST",
-  body: JSON.stringify(data),
-});
