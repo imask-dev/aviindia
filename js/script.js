@@ -34,7 +34,7 @@ document.getElementById("enquiryForm").addEventListener("submit", function(e){
   const message = this.querySelector("textarea").value;
 
   // 1. Send to Google Sheet
-fetch("https://aiahm.in/api/submit", {
+fetch("api/submit", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ name, email, phone, course, message })
@@ -79,5 +79,6 @@ document.getElementById("closeSuccess").onclick = () => {
 };
 
 });
+
 
 
