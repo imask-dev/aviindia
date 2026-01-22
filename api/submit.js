@@ -33,11 +33,13 @@ export default async function handler(req, res) {
     body: JSON.stringify(data),
   });
 
-  await fetch(process.env.MAILCHIMP_WEBHOOK, {
-    method: "POST",
-    body: JSON.stringify(data),
-  });
+await fetch("https://aiahm.in/api/mailchimp", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(data),
+});
 
   return res.json({ success: true });
 }
+
 
