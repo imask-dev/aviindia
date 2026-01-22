@@ -23,23 +23,6 @@
         //     }
         // });
 
-  function doPost(e) {
-  var sheet = SpreadsheetApp.getActiveSheet();
-  var data = JSON.parse(e.postData.contents);
-
-  sheet.appendRow([
-    new Date(),
-    data.name,
-    data.email,
-    data.phone,
-    data.course,
-    data.message
-  ]);
-
-  return ContentService
-    .createTextOutput(JSON.stringify({status: "success"}))
-    .setMimeType(ContentService.MimeType.JSON);
-}
 
 document.getElementById("enquiryForm").addEventListener("submit", function(e){
   e.preventDefault();
@@ -96,3 +79,4 @@ document.getElementById("closeSuccess").onclick = () => {
 };
 
 });
+
