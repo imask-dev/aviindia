@@ -34,7 +34,7 @@ document.getElementById("enquiryForm").addEventListener("submit", function(e){
   const message = this.querySelector("textarea").value;
 
   // 1. Send to Google Sheet
-fetch("api/submit", {
+fetch("https://www.aiahm.in/api/submit", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ name, email, phone, course, message })
