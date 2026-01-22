@@ -75,27 +75,28 @@
 <body>
     <header>
         <div class="container navbar">
-            <a href="/index.html" class="logo">
-                <img src="/images/assets/Logo.jpg" alt="AviIndia Logo" style="height: 30px; margin-right: 10px;">
+            <a href="https://www.aiahm.in" class="logo">
+                <img src="/images/assets/logo.png" alt="AviIndia Logo" style="height: 30px; margin-right: 10px;">
             </a>
             <div class="hamburger" id="hamburger">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links" id="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="#admission">Admission</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.aiahm.in">Home</a></li>
+                <li><a href="https://www.aiahm.in/#about">About</a></li>
+                <li><a href="https://www.aiahm.in/courses.html">Courses</a></li>
+                <li><a href="https://www.aiahm.in/#admission">Admission</a></li>
+                <li><a href="https://www.aiahm.in/contact.html">Contact</a></li>
             </ul>
         </div>
     </header>
 
     <section id="home">
         <div class="container hero-content">
-            <h1>Soar High With AVI<span class="highlight-text">INDIA</span></h1>
+            <h1>Soar High With</h1>
+            <img src="/images/assets/hero.png" alt="AviIndia Logo" style="width: 60%">
             <p>Institute of Aviation and Hospitality Management.<br>Your gateway to a premium career in the skies and beyond!</p>
-            <a href="courses.html" class="btn btn-primary">Explore Courses</a>
+            <a href="https://www.aiahm.in/courses.html" class="btn btn-primary">Explore Courses</a>
         </div>
     </section>
 
@@ -213,16 +214,16 @@
         <div class="container ">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <img src="/images/assets/Logo.jpg" alt="AVIINDIA">
+                    <img src="/images/assets/logo.png" alt="AVIINDIA">
                     <p>The Premier Institute For Aviation & Hospitality Management Training.</p>
                 </div>
 
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="courses.html">Courses</a></li>
-                        <li><a href="#admission">Admission</a></li>
+                        <li><a href="http://www.aiahm.in/#about">About Us</a></li>
+                        <li><a href="http://www.aiahm.in/courses.html">Courses</a></li>
+                        <li><a href="http://www.aiahm.in/#admission">Admission</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -256,6 +257,17 @@
              </footer>
 
     <script src="/js/script.js"></script>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const path = window.location.pathname.replace("/", "");
+
+    if (path && document.getElementById(path)) {
+      document.getElementById(path).scrollIntoView({ behavior: "smooth" });
+    }
+  });
+
+</script>
     
 </body>
 
