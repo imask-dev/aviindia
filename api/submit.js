@@ -5,9 +5,15 @@ export default async function handler(req, res) {
     "https://aiahm.in"
   ];
 
-  const origin = req.headers.origin;
-  if (allowedOrigins.includes(origin)) {
-    res.setHeader("Access-Control-Allow-Origin", origin);
+  const origin = req.headers.origin || "";
+  const referer = req.headers.referer || "";
+
+  const isAllowed =
+    allowedOrigins.some(o => origin.startsWith(o)) ||
+    allowedOrigins.some(o => referer.startsWith(o));
+
+  if (isAllowed) {
+    res.setHeader("Access-Control-Allow-Origin", origin || referer);
   }
 
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
@@ -18,7 +24,7 @@ export default async function handler(req, res) {
 
   const data = req.body;
 
-  if (!data.name || !data.phone) {
+  if (!data?.name || !data?.phone) {
     return res.status(400).json({ success: false });
   }
 
@@ -26,14 +32,13 @@ export default async function handler(req, res) {
     method: "POST",
     body: JSON.stringify(data),
   });
-  
+
   await fetch(process.env.MAILCHIMP_WEBHOOK, {
-  method: "POST",
-  body: JSON.stringify(data),
-});
-  
+    method: "POST",
+    body: JSON.stringify(data),
+  });
+
   return res.json({ success: true });
 }
-
 
 
