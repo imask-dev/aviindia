@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AviIndia Institute - Premier Aviation and Hospitality Management Training in Kolkata. Build a career in airlines, airport ground staff, and cabin crew.">
+    <title>AviIndia | Institute Of Aviation And Hospitality Management (AIAHM)</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image" href="/images/assets/ai.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<!-- Sticky Enquiry Button -->
+<div id="sticky-enquiry-btn">Enquire Now!</div>
+
+<!-- Enquiry Popup -->
+<div id="enquiry-popup">
+  <div class="popup-box">
+    <span id="close-popup">&times;</span>
+    <h2>Enquiry Form</h2>
+
+    <form id="enquiryForm">
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your name" required>
+
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter your email" required>
+
+      <label>Phone Number</label>
+      <input type="tel" placeholder="Enter your number" required>
+
+      <label>Interested Course</label>
+      <select>
+        <option>Utility Ground Services</option>
+        <option>Airport Ground Staff</option>
+        <option>Retail Service Management</option>
+        <option>Aviation & Hospitality</option>
+        <option>Cabin Crew Program</option>
+      </select>
+
+      <label>Message</label>
+      <textarea placeholder="How can we help you?"></textarea>
+
+      <button type="submit">SEND MESSAGE</button>
+
+        <div id="successOverlay">
+        <div class="success-card">
+            <div class="checkmark">✓</div>
+            <h2>Enquiry Sent!</h2>
+            <p>Thank you for contacting AIAHM.<br>Our team will reach you shortly.</p>
+            <p class="redirect">Redirecting to Home...</p>
+            <button id="closeSuccess">Close Now</button>
+        </div>
+    </div>
+    </form>
+    </div>
+</div>
+
+<script>
+  const btn = document.getElementById("sticky-enquiry-btn");
+  const popup = document.getElementById("enquiry-popup");
+  const close = document.getElementById("close-popup");
+
+  btn.onclick = () => popup.style.display = "flex";
+  close.onclick = () => popup.style.display = "none";
+
+  window.onclick = (e) => {
+    if (e.target === popup) popup.style.display = "none";
+  };
+</script>
+
+<body>
+
+    <header>
+        <div class="container navbar">
+            <a href="/index.html" class="logo">
+                <img src="/images/assets/Logo.jpg" alt="AviIndia Logo" style="height: 30px; margin-right: 10px;">
+            </a>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="index.html#admission">Admission</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <section id="courses" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Courses</h2>
+                <p>Professional Certificate Programs</p>
+            </div>
+            
+<div class="course-grid">
+
+    <div class="course-card">
+        <img src="/images/assets/UGS.jpg" alt="Utility Ground Services">
+        <div class="course-header">
+            Utility Ground Services
+        </div>
+        <div class="course-body">
+            <p>Baggage handling, security screening, loading, inflight operations, ground handling.</p>
+            <div class="eligibility">Eligibility: 10th pass and above</div>
+            <div class="eligibility" style="border-top: none; color: var(--primary-gold-dark);">Duration: 3 Months</div>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <img src="/images/assets/AGS.jpg" alt="Airport Ground Staff">
+        <div class="course-header">
+            Airport Ground Staff
+        </div>
+        <div class="course-body">
+            <p>Airline check-in, security procedures, customer service operations.</p>
+            <div class="eligibility">Eligibility: Graduation and above</div>
+            <div class="eligibility" style="border-top: none; color: var(--primary-gold-dark);">Duration: 6 Months</div>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <img src="/images/assets/RSM.jpg" alt="Retail Service Management">
+        <div class="course-header">
+            Retail Service Management
+        </div>
+        <div class="course-body">
+            <p>Basics of retail operations, customer service, and service quality improvement.</p>
+            <div class="eligibility">Eligibility: 10+2 and above</div>
+            <div class="eligibility" style="border-top: none; color: var(--primary-gold-dark);">Duration: 4 Months</div>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <img src="/images/assets/AH.jpg" alt="Aviation & Hospitality">
+        <div class="course-header">
+            Aviation & Hospitality
+        </div>
+        <div class="course-body">
+            <p>Comprehensive management training for airline check-in, security, and hotel customer service.</p>
+            <div class="eligibility">Eligibility: 10+2 and above</div>
+            <div class="eligibility" style="border-top: none; color: var(--primary-gold-dark);">Duration: 4 Months</div>
+        </div>
+    </div>
+
+    <div class="course-card">
+        <img src="/images/assets/CC.jpg" alt="Cabin Crew Program">
+        <div class="course-header">
+            Cabin Crew Program
+        </div>
+        <div class="course-body">
+            <p>Specialized grooming, communication skills, and personality development for in-flight careers.</p>
+            <div class="eligibility">Eligibility: 10+2 with good English</div>
+            <div class="eligibility" style="border-top: none; color: var(--primary-gold-dark);">Duration: 8 Months</div>
+        </div>
+    </div>
+
+
+
+                <div class="free-course">
+                    <h3><i class="fas fa-gift"></i> Free With All Courses!</h3>
+                    <p style="color: #ddd;">Interview Preparation | Resume Building | Confidence & Soft Skills Training | Personality Development<br>English Speaking & Group Discussion (GD) | Professional Uniform | Welcome Kit</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <h3>Course Duration Overview</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Duration</th>
+                            <th>Certification</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cabin Crew Program</td>
+                            <td>8 Months</td>
+                            <td>Professional Certificate</td>
+                        </tr>
+                        <tr>
+                            <td>Airport Ground Staff Training</td>
+                            <td>6 Months</td>
+                            <td>Professional Certificate</td>
+                        </tr>
+
+                      <tr>
+                            <td>Retail Service Management</td>
+                            <td>4 Months</td>
+                            <td>Professional Certificate</td>
+                        </tr>
+                        <tr>
+                            <td>Aviation & Hospitality Management</td>
+                            <td>4 Months</td>
+                            <td>Professional Certificate</td>
+                        </tr>
+                        <tr>
+                            <td>Utility Ground Services</td>
+                            <td>3 Months</td>
+                            <td>Professional Certificate</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+        <footer>
+        <div class="container">
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/aiahmofficial" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/aiahm_official/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/aiahm" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/channel/UCNrl94636uCwdz6MFzzR1aQ" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <footer>
+        <div class="container ">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="/images/assets/Logo.jpg" alt="AVIINDIA">
+                    <p>The Premier Institute For Aviation & Hospitality Management Training.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="index.html#admission">Admission</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Courses</h4>
+                    <ul>
+                        <li><a href="courses.html">Utility Ground Services</a></li>
+                        <li><a href="courses.html">Airport Ground Staff</a></li>
+                        <li><a href="courses.html">Retail Service Management</a></li>
+                        <li><a href="courses.html">Aviation & Hospitality</a></li>
+                        <li><a href="courses.html">Cabin Crew Program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                    <li>
+                        <i class="fas fa-phone" style="color:var(--primary-gold)"></i>
+                        <a href="tel:+919875598230" style="color: inherit; text-decoration: none;">+91-9875598230</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope" style="color:var(--primary-gold)"></i>
+                        <a href="mailto:info@aiahm.in" style="color: inherit; text-decoration: none;"> info@aiahm.in</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+            <p>&copy; 2026 AviIndia Institute Of Aviation and Hospitality Management. All Rights Reserved.</p>
+            </div>
+               </div>
+             </footer>
+
+    <script src="/js/script.js"></script>
+    
+</body>
+
+</html>

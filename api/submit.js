@@ -1,27 +1,45 @@
 export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
+  const allowedOrigins = [
+    "https://aiahm.in",
+    "https://aviindia-git-features-imask-dev.vercel.app",
+    "https://www.aiahm.in"   
+  ];
+
+  const origin = req.headers.origin || "";
+  const referer = req.headers.referer || "";
+
+  const isAllowed =
+    allowedOrigins.some(o => origin.startsWith(o)) ||
+    allowedOrigins.some(o => referer.startsWith(o));
+
+  if (isAllowed) {
+    res.setHeader("Access-Control-Allow-Origin", origin || referer);
   }
 
-  try {
-    const data = req.body;
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
-    const response = await fetch(process.env.SHEET_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
+  if (req.method === "OPTIONS") return res.status(200).end();
+  if (req.method !== "POST") return res.status(405).end();
 
-    const text = await response.text();
+  const data = req.body;
 
-    if (!response.ok) {
-      console.error("Sheet error:", text);
-      return res.status(500).json({ error: "Sheet failed" });
-    }
-
-    return res.json({ success: true });
-  } catch (err) {
-    console.error("API crash:", err);
-    return res.status(500).json({ error: "Server error" });
+  if (!data?.name || !data?.phone) {
+    return res.status(400).json({ success: false });
   }
+
+  await fetch(process.env.SHEET_URL, {
+    method: "POST",
+    body: JSON.stringify(data),
+  });
+
+await fetch("https://aiahm.in/api/mailchimp", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(data),
+});
+
+  return res.json({ success: true });
 }
+
+

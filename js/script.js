@@ -23,6 +23,23 @@
         //     }
         // });
 
+  function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSheet();
+  var data = JSON.parse(e.postData.contents);
+
+  sheet.appendRow([
+    new Date(),
+    data.name,
+    data.email,
+    data.phone,
+    data.course,
+    data.message
+  ]);
+
+  return ContentService
+    .createTextOutput(JSON.stringify({status: "success"}))
+    .setMimeType(ContentService.MimeType.JSON);
+}
 
 document.getElementById("enquiryForm").addEventListener("submit", function(e){
   e.preventDefault();
@@ -34,7 +51,7 @@ document.getElementById("enquiryForm").addEventListener("submit", function(e){
   const message = this.querySelector("textarea").value;
 
   // 1. Send to Google Sheet
-fetch("https://www.aiahm.in/api/submit", {
+fetch("/api/submit", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ name, email, phone, course, message })
@@ -79,6 +96,3 @@ document.getElementById("closeSuccess").onclick = () => {
 };
 
 });
-
-
-
