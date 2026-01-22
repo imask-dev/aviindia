@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/about", "destination": "/" },
+    { "source": "/courses", "destination": "/" },
+    { "source": "/contact", "destination": "/" },
+    { "source": "/admission", "destination": "/" }
+  ]
+}
