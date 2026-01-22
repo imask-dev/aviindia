@@ -1,8 +1,8 @@
 export default async function handler(req, res) {
   const allowedOrigins = [
+    "https://aiahm.in",
     "https://aviindia-git-features-imask-dev.vercel.app",
-    "https://www.aiahm.in",
-    "https://aiahm.in"
+    "https://www.aiahm.in"   
   ];
 
   const origin = req.headers.origin || "";
@@ -40,3 +40,4 @@ export default async function handler(req, res) {
 
   return res.json({ success: true });
 }
+
