@@ -100,15 +100,15 @@ aviindia/
 
 ## 👨‍💻 Developer
 
-Adil Shaikh
-Web Designer & Developer
-📧 mdadil.shaikh98@gmail.com
-🔗 https://www.linkedin.com/in/imask
-🔗 https://www.codewavedesigns.com/
+Adil Shaikh  
+Web Designer & Developer  
+📧 mdadil.shaikh98@gmail.com  
+🔗 https://www.linkedin.com/in/imask  
+🔗 https://www.codewavedesigns.com/  
 
 ---
 
 ## 📄 License
 
-This project is for AiAHM official use.
+This project is for AiAHM official use.  
 Unauthorized copying, selling, or redistribution is not allowed.
