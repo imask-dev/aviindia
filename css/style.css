@@ -1039,7 +1039,7 @@ footer {
   footer {
     background-color: #f8f8f8;
     color: #111;
-    padding: 50px 0 10px;
+    padding: 30px 0 10px;
     text-align: center;
   }
   .footer-socials {
@@ -1049,7 +1049,7 @@ footer {
   .footer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 15px;
     margin-bottom: 20px;
   }
 
