@@ -22,40 +22,55 @@
     <span id="close-popup">&times;</span>
     <h2>Enquiry Form</h2>
 
-    <form id="enquiryForm">
-      <label>Full Name</label>
-      <input type="text" placeholder="Enter your name" required>
+<form id="enquiryForm"
+      action="https://formsubmit.co/58f13d9567326abe31cfe6fb2961bcf2"
+      method="POST"
+      target="hidden_iframe"
+      onsubmit="return showSuccess(event)">
+
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://aiahm.in/thanks.html">
+    
+    <label>Full Name</label>
+      <input type="text" name="name" placeholder="Enter your name" required>
 
       <label>Email Address</label>
-      <input type="email" placeholder="Enter your email" required>
+      <input type="email" name="email" placeholder="Enter your email" required>
 
       <label>Phone Number</label>
-      <input type="tel" placeholder="Enter your number" required>
+      <input type="tel" name="phone" placeholder="Enter your number" required>
 
       <label>Interested Course</label>
-      <select>
-        <option>Utility Ground Services</option>
-        <option>Airport Ground Staff</option>
-        <option>Retail Service Management</option>
-        <option>Aviation & Hospitality</option>
-        <option>Cabin Crew Program</option>
+      <select name="course" required>
+        <option value="">Select a course</option>
+        <option value="Utility Ground Service">Utility Ground Service</option>
+        <option value="Airport Ground Staff Program">Airport Ground Staff Program</option>
+        <option value="Retail Service Management">Retail Service Management</option>
+        <option value="Aviation And Hospitality Management">Aviation And Hospitality Management</option>
+        <option value="Cabin Crew Program">Cabin Crew Program</option>
+        <option value="Other General Query">Other General Query</option>
       </select>
 
       <label>Message</label>
-      <textarea placeholder="How can we help you?"></textarea>
+      <textarea name="message" type="text" placeholder="How can we help you?"></textarea>
 
       <button type="submit">SEND MESSAGE</button>
-
-        <div id="successOverlay">
-        <div class="success-card">
-            <div class="checkmark">✓</div>
-            <h2>Enquiry Sent!</h2>
-            <p>Thank you for contacting AIAHM.<br>Our team will reach you shortly.</p>
-            <p class="redirect">Redirecting to Home...</p>
-            <button id="closeSuccess">Close Now</button>
-        </div>
     </div>
     </form>
+    <iframe name="hidden_iframe"
+        sandbox="allow-forms allow-scripts"
+        style="display:none;"></iframe>
+        
+    <div id="successOverlay">
+  <div class="success-card">
+    <div class="checkmark">✓</div>
+    <h2>Enquiry Sent!</h2>
+    <p>Thank you for contacting AIAHM.<br>Our team will reach you shortly.</p>
+    <p class="redirect">Redirecting to Home...</p>  
+    <button id="closeSuccess">Close Now</button>
+  </div>
+</div>
     </div>
 </div>
 
@@ -75,18 +90,18 @@
 <body>
     <header>
         <div class="container navbar">
-            <a href="https://www.aiahm.in/" class="logo">
-                <img src="/images/assets/Logo.jpg" alt="AviIndia Logo" style="height: 30px; margin-right: 10px;">
+            <a href="https://www.aiahm.in" class="logo">
+                <img src="/images/assets/new logo.png" alt="AviIndia Logo" style="height: 30px; margin-right: 10px;">
             </a>
             <div class="hamburger" id="hamburger">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links" id="nav-links">
-                <li><a href="https://www.aiahm.in/">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="#admission">Admission</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.aiahm.in">Home</a></li>
+                <li><a href="https://www.aiahm.in/#about">About</a></li>
+                <li><a href="https://www.aiahm.in/courses.html">Courses</a></li>
+                <li><a href="https://www.aiahm.in/#admission">Admission</a></li>
+                <li><a href="https://www.aiahm.in/contact.html">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -214,8 +229,7 @@
         <div class="container ">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <img src="/images/assets/logo.png" alt="AVIINDIA">
-                    <p>The Premier Institute For Aviation & Hospitality Management Training.</p>
+                    <img src="/images/assets/footer transparent logo.png" alt="AVIINDIA">
                 </div>
 
                 <div class="footer-col">
@@ -229,10 +243,10 @@
                 <div class="footer-col">
                     <h4>Courses</h4>
                     <ul>
-                        <li><a href="courses.html">Utility Ground Services</a></li>
-                        <li><a href="courses.html">Airport Ground Staff</a></li>
+                        <li><a href="courses.html">Utility Ground Service</a></li>
+                        <li><a href="courses.html">Airport Ground Staff Program</a></li>
                         <li><a href="courses.html">Retail Service Management</a></li>
-                        <li><a href="courses.html">Aviation & Hospitality</a></li>
+                        <li><a href="courses.html">Aviation And Hospitality Management</a></li>
                         <li><a href="courses.html">Cabin Crew Program</a></li>
                     </ul>
                 </div>
@@ -251,7 +265,7 @@
                 </div>
             </div>
             <div class="copyright">
-            <p>&copy; 2026 AviIndia Institute Of Aviation and Hospitality Management. All Rights Reserved.</p>
+            <p>&copy;2026 AviIndia Institute Of Aviation and Hospitality Management. All Rights Reserved.</p>
             </div>
                </div>
              </footer>
@@ -272,5 +286,3 @@
 </body>
 
 </html>
-
-
