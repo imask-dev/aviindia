@@ -76,18 +76,18 @@
 
     <header>
         <div class="container navbar">
-            <a href="https://www.aiahm.in/" class="logo">
-                <img src="/images/assets/Logo.jpg" alt="AviIndia Logo" style="height: 30px; margin-right: 10px;">
+            <a href="https://www.aiahm.in" class="logo">
+                <img src="/images/assets/logo.png" alt="AviIndia Logo" style="height: 30px; margin-right: 10px;">
             </a>
             <div class="hamburger" id="hamburger">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links" id="nav-links">
-                <li><a href="https://www.aiahm.in/">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="index.html#admission">Admission</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.aiahm.in">Home</a></li>
+                <li><a href="https://www.aiahm.in/#about">About</a></li>
+                <li><a href="https://www.aiahm.in/courses.html">Courses</a></li>
+                <li><a href="https://www.aiahm.in/#admission">Admission</a></li>
+                <li><a href="https://www.aiahm.in/contact.html">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -125,7 +125,7 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <strong>Email:</strong><br>
-                            <a href="mailto:contact@aviindia.in" style="color: white;">info@aiahm.in</a>
+                            <a href="mailto:info@aiahm.in" style="color: white;">info@aiahm.in</a>
                         </div>
                     </div>
 
@@ -140,9 +140,11 @@
                     </div>
 
                 <div>
-                    <form name="enquiry" method="POST" data-netlify="true"> 
+                    <form name="enquiry" action="https://formsubmit.co/58f13d9567326abe31cfe6fb2961bcf2" method="POST"> 
                         <h3 style="color: var(--primary-black); margin-bottom: 20px;">Enquiry Form</h3>
-                        
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="https://aiahm.in/thanks.html">
                         <div class="form-group">
                             <label>Full Name</label>
                             <input type="text" name="name" required placeholder="Enter your name">
@@ -160,19 +162,20 @@
 
                         <div class="form-group">
                             <label>Interested Course</label>
-                            <select name="course">
-                                <option value="Cabin Crew">Utility Ground Services</option>
-                                <option value="Ground Staff">Airport Ground Staff</option>
-                                <option value="Aviation Mgmt">Retail Service Management</option>
-                                <option value="Utility Services">Aviation & Hospitality</option>
-                                <option value="Utility Services">Cabin Crew Program</option>
+                            <select name="course" required>
+                                <option value="">Select a course</option>
+                                <option value="Utility Ground Services">Utility Ground Services</option>
+                                <option value="Airport Ground Staff">Airport Ground Staff</option>
+                                <option value="Retail Service Management">Retail Service Management</option>
+                                <option value="Aviation & Hospitality">Aviation & Hospitality</option>
+                                <option value="Cabin Crew Program">Cabin Crew Program</option>
                                 <option value="Other">Other General Query</option>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label>Message</label>
-                            <textarea name="message" rows="4" placeholder="How can we help you?"></textarea>
+                            <textarea type="text" name="message" rows="4" placeholder="How can we help you?"></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
@@ -241,6 +244,4 @@
     <script src="/js/script.js"></script>
     
 </body>
-
 </html>
-

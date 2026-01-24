@@ -84,6 +84,7 @@
   justify-content: center;
   align-items: center;
   z-index: 99999;
+  pointer-events: auto;
 }
 
 /* Popup Box */
@@ -95,6 +96,7 @@
   border-radius: 15px;
   position: relative;
   animation: zoomIn 0.3s ease;
+  pointer-events: auto;
 }
 
 .popup-box h2 {
@@ -130,9 +132,9 @@
   cursor: pointer;
 }
 
-@keyframes zoomIn {
-  from {transform: scale(0.8); opacity: 0;}
-  to {transform: scale(1); opacity: 1;}
+@keyframes popIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
 }
 
 
