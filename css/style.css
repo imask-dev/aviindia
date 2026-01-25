@@ -1062,6 +1062,10 @@ footer {
     display: inline-block;
   }
 
+   .footer-col img {
+    max-height: 100px;
+  }
+
   .footer-col ul li {
     margin-bottom: 5px;
   }
@@ -1148,3 +1152,4 @@ footer {
     transform: scale(1);
   }
 }
+
