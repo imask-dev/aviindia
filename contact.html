@@ -22,7 +22,16 @@
     <span id="close-popup">&times;</span>
     <h2>Enquiry Form</h2>
 
-    <form id="enquiryForm">
+      <form id="enquiryForm"
+      action="https://formsubmit.co/58f13d9567326abe31cfe6fb2961bcf2"
+      method="POST"
+      target="hidden_iframe"
+      onsubmit="return showSuccess(event)">
+
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://aiahm.in/thanks.html">
+      
       <label>Full Name</label>
       <input type="text" placeholder="Enter your name" required>
 
@@ -245,3 +254,4 @@
 </body>
 
 </html>
+
