@@ -9,7 +9,7 @@
   --secondary-blue: #1e3a8a; /* Deep Aviation Blue for accents */
   --text-dark: #1f2937;
   --text-light: #6b7280;
-  --bg-light: #f9fafb;
+  --bg-light: #ECECEC;
   --white: #ffffff;
   --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -310,7 +310,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 70px;
 }
 
 .logo {
@@ -321,12 +321,6 @@ header {
 }
 
 /* Simulating the logo text style */
-.logo span.avi {
-  color: var(--primary-black);
-}
-.logo span.india {
-  color: var(--primary-gold);
-}
 
 .nav-links {
   display: flex;
@@ -355,7 +349,7 @@ header {
 /* --- HERO SECTION --- */
 #home {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.6)),
     url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
   background-size: cover;
   background-position: center;
@@ -375,6 +369,7 @@ header {
 }
 
 .hero-content p {
+  color: var(--primary-black);
   font-size: 1.3rem;
   margin: 30px;
   max-width: 700px;
@@ -489,7 +484,7 @@ header {
 
 .section-title {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .section-title h2 {
@@ -499,7 +494,7 @@ header {
 
 /* --- COURSES --- */
 #courses {
-  background: var(--bg-light);
+  background: var(--white);
 }
 
 .course-grid {
@@ -509,7 +504,7 @@ header {
 }
 
 .course-card {
-  background: var(--white);
+  background: var(--bg-light);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -950,8 +945,7 @@ footer {
 
 .copyright {
   text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid #222;
+  padding-top: 10px;
   font-size: 0.9rem;
 }
 
@@ -972,21 +966,28 @@ footer {
     display: block;
   }
 
-  .nav-links {
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background: var(--white);
-    flex-direction: column;
-    padding: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    display: none;
-  }
+.nav-links {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 
-  .nav-links.active {
-    display: flex;
-  }
+  /* animation setup */
+  transform: translateY(-15px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.35s ease;
+}
+
+.nav-links.active {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
 
   .hero-content h1 {
     font-size: 2.2rem;

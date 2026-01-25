@@ -76,3 +76,9 @@ document.getElementById("closeSuccess").onclick = () => {
   document.getElementById("successOverlay").style.display = "none";
 };
 
+if (window.location.pathname === "/about") {
+  document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+}
+if (window.location.pathname === "/admission") {
+  document.getElementById("admission").scrollIntoView({ behavior: "smooth" });
+}
