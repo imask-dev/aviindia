@@ -181,6 +181,12 @@
                 text-align: left;
             }
 
+            .hero-subtext p {
+            color: var(--primary-black);
+            font-size: .85rem;
+            line-height: 1.65;
+            }
+
             .pill-container {
                 height: 350px;
                 border-radius: 40px; /* Less rounded on mobile for more space */    
@@ -195,4 +201,5 @@
                 margin-left: auto;
                 margin-right: auto;
             }
+
         }
