@@ -1,14 +1,9 @@
 {
-  "routes": [
-    { "src": "/about", "dest": "/about.html" },
-    { "src": "/contact", "dest": "/contact.html" }
-    { "src": "/courses", "dest": "/courses.html" }
-  ]
-}
-
-{
   "rewrites": [
     { "source": "/about", "destination": "/index.html" },
-    { "source": "/admission", "destination": "/index.html" }
+    { "source": "/admission", "destination": "/index.html" },
+
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/courses", "destination": "/courses.html" }
   ]
 }
