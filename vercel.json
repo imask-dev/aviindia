@@ -1,9 +1,10 @@
 {
   "rewrites": [
-    { "source": "/about", "destination": "/index.html" },
-    { "source": "/admission", "destination": "/index.html" },
+    { "source": "/about", "destination": "/index.html#about" },
+    { "source": "/admission", "destination": "/index.html#admission" },
 
     { "source": "/contact", "destination": "/contact.html" },
-    { "source": "/courses", "destination": "/courses.html" }
+    { "source": "/courses", "destination": "/courses.html" },
+    { "source": "/thanks", "destination": "/thanks.html" }
   ]
 }
