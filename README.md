@@ -110,5 +110,5 @@ Web Designer & Developer
 
 ## 📄 License
 
-This project is for AiAHM official use.  
+This project is for AIAHM official use.  
 Unauthorized copying, selling, or redistribution is not allowed.
