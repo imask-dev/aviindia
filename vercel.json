@@ -5,7 +5,8 @@
 
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/courses", "destination": "/courses.html" },
+    { "source": "/terms", "destination": "/terms.html" },
+    { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
     { "source": "/thanks", "destination": "/thanks.html" }
   ]
 }
-
