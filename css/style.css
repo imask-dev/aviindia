@@ -4,9 +4,11 @@
 :root {
   /* Brand Colors based on Logo */
   --primary-black: #000000;
-  --primary-gold: #ffc107; /* Adjusted to match the yellow/orange in logo */
+  --primary-gold: #ffc107;
+  /* Adjusted to match the yellow/orange in logo */
   --primary-gold-dark: #e0a800;
-  --secondary-blue: #1e3a8a; /* Deep Aviation Blue for accents */
+  --secondary-blue: #1e3a8a;
+  /* Deep Aviation Blue for accents */
   --text-dark: #1f2937;
   --text-light: #6b7280;
   --bg-light: #ECECEC;
@@ -141,6 +143,7 @@ img {
     transform: scale(0.85);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -166,7 +169,8 @@ img {
 
 .img-wrap {
   width: 100%;
-  max-width: 500px; /* change if needed */
+  max-width: 500px;
+  /* change if needed */
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 10px;
@@ -194,14 +198,14 @@ img {
   margin: 50px auto;
 }
 
-.section-header h2 {
+.section-header h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
   position: relative;
   display: inline-block;
 }
 
-.section-header h2::after {
+.section-header h1::after {
   content: "";
   display: block;
   width: 60px;
@@ -219,11 +223,15 @@ img {
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
-  transition: all 0.4s ease; /* Smoothed out transition */
+  transition: all 0.4s ease;
+  /* Smoothed out transition */
   border: none;
-  position: relative; /* Essential for animations */
-  overflow: hidden; /* Keeps the animation inside the button */
-  z-index: 1; /* Ensures text sits on top of animation */
+  position: relative;
+  /* Essential for animations */
+  overflow: hidden;
+  /* Keeps the animation inside the button */
+  z-index: 1;
+  /* Ensures text sits on top of animation */
 }
 
 /* --- PRIMARY BUTTON (Solid Gold) --- 
@@ -238,31 +246,32 @@ img {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%; /* Start off-screen left */
+  left: -100%;
+  /* Start off-screen left */
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.4),
-    transparent
-  );
+  background: linear-gradient(120deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent);
   transition: all 0.6s;
   z-index: -1;
 }
 
 .btn-primary:hover {
   color: var(--white);
-  background-color: var(
-    --primary-gold-dark
-  ); /* Keeps your original darken effect */
-  transform: translateY(-3px); /* Slightly increased lift */
-  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.15); /* Adds a subtle shadow drop */
+  background-color: var(--primary-gold-dark);
+  /* Keeps your original darken effect */
+  transform: translateY(-3px);
+  /* Slightly increased lift */
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.15);
+  /* Adds a subtle shadow drop */
 }
 
 /* Trigger the shine movement */
 .btn-primary:hover::before {
-  left: 100%; /* Move off-screen right */
+  left: 100%;
+  /* Move off-screen right */
 }
 
 /* --- OUTLINE BUTTON --- 
@@ -279,15 +288,18 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 0%; /* Start with 0 width */
+  width: 0%;
+  /* Start with 0 width */
   height: 100%;
   background: var(--primary-gold);
-  z-index: -1; /* Put behind text */
+  z-index: -1;
+  /* Put behind text */
   transition: all 0.4s ease;
 }
 
 .btn-outline:hover {
-  color: var(--primary-black); /* Text changes to black */
+  color: var(--primary-black);
+  /* Text changes to black */
   /* Note: We don't set background-color here, the ::before element handles it */
 }
 
@@ -529,6 +541,7 @@ header {
   color: var(--primary-gold);
   padding: 15px;
   text-align: center;
+  font-size: 16px;
 }
 
 .course-header i {
@@ -563,7 +576,8 @@ header {
 .free-course {
   background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
   color: white;
-  grid-column: 1 / -1; /* Span full width */
+  grid-column: 1 / -1;
+  /* Span full width */
   text-align: center;
   padding: 30px;
   border-radius: 10px;
@@ -574,7 +588,8 @@ header {
 .free-course:hover {
   background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
   color: white;
-  grid-column: 1 / -1; /* Span full width */
+  grid-column: 1 / -1;
+  /* Span full width */
   text-align: center;
   padding: 30px;
   border-radius: 10px;
@@ -635,7 +650,9 @@ tr:hover {
   text-align: center;
 }
 
-.stat-item h3 {
+.stat-item {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
   font-size: 2.5rem;
   color: var(--primary-gold);
 }
@@ -706,6 +723,7 @@ tr:hover {
   color: var(--white);
 }
 
+#contact h1,
 #contact h2,
 #contact h3 {
   color: var(--white);
@@ -881,6 +899,7 @@ footer {
   padding: 70px 0 20px;
   text-align: center;
 }
+
 .footer-socials {
   margin: 10px;
 }
@@ -955,7 +974,7 @@ footer {
     padding: 0 20px;
   }
 
-  .section-header h2 {
+  .section-header h1 {
     font-size: 2.5rem;
     margin: 40px 0 15px;
     position: relative;
@@ -966,28 +985,28 @@ footer {
     display: block;
   }
 
-.nav-links {
-  position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  background: var(--white);
-  flex-direction: column;
-  padding: 20px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 
-  /* animation setup */
-  transform: translateY(-15px);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.35s ease;
-}
+    /* animation setup */
+    transform: translateY(-15px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.35s ease;
+  }
 
-.nav-links.active {
-  transform: translateY(0) scale(1);
-  opacity: 1;
-  pointer-events: auto;
-}
+  .nav-links.active {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+  }
 
   .hero-content h1 {
     font-size: 2.2rem;
@@ -1003,15 +1022,32 @@ footer {
     overflow-x: scroll;
   }
 
+  .my-table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .my-table td {
+    font-size: .8em;
+    padding: 8px;
+  }
+
+  .my-table th {
+    font-size: .9em;
+    padding: 8px;
+  }
+
   .section-padding {
     padding: 0;
   }
+
   .hero-content h1 {
     font-size: 3.2rem;
     margin: 15px;
     color: var(--white);
     line-height: 1.2;
   }
+
   .hero-content p {
     font-size: 0.9rem;
     margin: 30px auto;
@@ -1029,6 +1065,7 @@ footer {
     background: var(--primary-black);
     color: var(--white);
   }
+
   .join-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1043,6 +1080,7 @@ footer {
     padding: 30px 0 10px;
     text-align: center;
   }
+
   .footer-socials {
     margin: 0px;
   }
@@ -1062,7 +1100,7 @@ footer {
     display: inline-block;
   }
 
-   .footer-col img {
+  .footer-col img {
     max-height: 100px;
   }
 
@@ -1135,6 +1173,7 @@ footer {
     transform: scale(0.5);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -1145,11 +1184,12 @@ footer {
   0% {
     transform: scale(0.2);
   }
+
   60% {
     transform: scale(1.2);
   }
+
   100% {
     transform: scale(1);
   }
 }
-
