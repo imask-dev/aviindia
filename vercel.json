@@ -8,6 +8,7 @@
     { "source": "/terms-of-use", "destination": "/terms-of-use.html" },
     { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
     { "source": "/thanks", "destination": "/thanks.html" },
-    { "source": "/page-sitemap.xml", "destination": "/sitemap.xml" }
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" }
   ]
 }
+
